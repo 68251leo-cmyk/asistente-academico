@@ -20,11 +20,10 @@ class menuPrincipal():
     def mostrar_menu(self):
         print("=== Menú Principal ===\n")
         print("1. Modelo IA")
-        print("2. Modelo nuevo")
-        print("3. Modelo Tutor programación")
-        print("4. Modelo tutor IA")
-        print("5. Modelo tutor base de datos")
-        print("\n0. Salir")
+        print("2. Modelo Tutor programación")
+        print("3. Modelo tutor IA")
+        print("4. Modelo tutor base de datos")
+        print("0. Salir\0")
 
     def ejecutar_opcion(self):
         while True:
@@ -41,22 +40,18 @@ class menuPrincipal():
                 respuesta = Markdown(prompt.generar_respuesta())
 
             elif self.opcion == "2":
-                prompt = Prompt(tutor="nuevo")
-                respuesta = Markdown(prompt.generar_respuesta())
-
-            elif self.opcion == "3":
                 prompt = Prompt(tutor="programacion")
                 respuesta = Markdown(prompt.generar_respuesta())
 
-            elif self.opcion == "4":
+            elif self.opcion == "3":
                 prompt = Prompt(tutor="ia")
                 respuesta = Markdown(prompt.generar_respuesta())
 
 
-            elif self.opcion == "5":
+            elif self.opcion == "4":
                 prompt = Prompt(tutor="base_datos")
                 respuesta = Markdown(prompt.generar_respuesta())
 
             else:
-                print("\n\t// Opción inválida. Por favor seleccione una opción válida.")
+                print("Opción inválida. Por favor seleccione una opción válida.")
                 self.pausar()

@@ -30,13 +30,20 @@ class Prompt:
                         content="Eres un tutor universitario, que responde en español, usa lenguaje sencillo, explica claramente, incluye ejemplos cuando convenga y reconoce cuando desconoces una respuesta."
                         )]
         elif self.tutor == "programacion":
-            return [SystemMessage(content="Eres un tutor de programacion, que responde en español, usa lenguaje sencillo, explica claramente, incluyendo ejemplos cuando convenga y reconoce cuando desconoces una respuesta")]
+            return [
+                SystemMessage(
+                    content="Eres un tutor de programacion, que responde en español, usa lenguaje sencillo, explica claramente, incluyendo ejemplos cuando convenga y reconoce cuando desconoces una respuesta"
+                )]
 
         elif self.tutor == "ia":
-            return [SystemMessage(content="Eres un tutor de inteligencia artificial, que responde en español, usa lenguaje sencillo, explica claramente, incluyendo ejemplos cuando convenga y reconoce cuando desconoces una respuesta")]        
+            return [
+                SystemMessage(content="Eres un tutor de inteligencia artificial, que responde en español, usa lenguaje sencillo, explica claramente, incluyendo ejemplos cuando convenga y reconoce cuando desconoces una respuesta"
+            )]        
 
         elif self.tutor == "base_datos":
-            return [SystemMessage(content="Eres un tutor de base de datos, que responde en español, usa lenguaje sencillo, explica claramente, incluyendo ejemplos cuando convenga y reconoce cuando desconoces una respuesta")]
+            return [
+                SystemMessage(content="Eres un tutor de base de datos, que responde en español, usa lenguaje sencillo, explica claramente, incluyendo ejemplos cuando convenga y reconoce cuando desconoces una respuesta"
+            )]
         else:
             return self.historial
 
