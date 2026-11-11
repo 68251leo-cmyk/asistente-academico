@@ -76,12 +76,12 @@ class Prompt:
                     else:
                         print(f"Tutor: {mensaje.content}")
                 
+            else:
+                self.historial.append(HumanMessage(content=pregunta))
 
-            self.historial.append(HumanMessage(content=pregunta))
+                respuesta = self.modelo.invoke(self.historial)
+                print("\n--------------------------")
+                print("Respuesta: ", respuesta.content)
 
-            respuesta = self.modelo.invoke(self.historial)
-            print("\n--------------------------")
-            print("Respuesta: ", respuesta.content)
-
-            self.historial.append(respuesta)
-            self.guardar_historial()
+                self.historial.append(respuesta)
+                self.guardar_historial()

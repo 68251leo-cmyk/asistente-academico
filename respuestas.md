@@ -57,7 +57,8 @@ con un metodo ```messages_to_dict()``` para depues sobreescribir el json y tambi
 * ¿Qué diferencia existe entre modelo local y API Key?
 El modelo local se ejecuta en la maquina de la persona que lo usuara, con limitaciones de su propio hardware mientras que usando uno con un API key sera con los datos y limitaciones que le de el proveedor
 
-## Pregunta de comprension
+
+# Pregunta de comprension
 1) primero utilice varios if para que segun sea el case decirle al modelo que rol debe tomar, si, el de un especialista en ia, o base datos etc.., en el constructor le meti ese rol, para que al hacerle un ´´´SystemMessage´´´ sepa que rol tamar segun sea el rol
 2) si el usuario solo escribe "nuevo" en el prompt se toma como un prompt especial que se condiciona con un if, para solo pasar el ´´´SystemMessage´´´ de nuevo y limpiar el json
 3) Al igual que el anterior "historial" se lo tomara como un prompt especial del programa para poder ver si el usuario ha ingresado datos o si solo se le ha dado el rol y se imprimen, con un for, si es mensaje de humano se pone con "usuario: " y si es de el bot seria con "Tutor: " para diferenciar
